@@ -1,10 +1,12 @@
+#include<bits/stdc++.h>
+
 class Solution {
   public:
     int getSecondLargest(vector<int> &arr) {
         if (arr.size() < 2) return -1;
 
-        int largest = INT_MIN;
-        int secondLargest = INT_MIN;
+        int largest = -1;
+        int secondLargest = -1;
 
         for (int i = 0; i < arr.size(); ++i) {
             if (arr[i] > largest) {
@@ -15,6 +17,6 @@ class Solution {
             }
         }
 
-        return (secondLargest == INT_MIN) ? -1 : secondLargest;
+        return secondLargest;
     }
 };
